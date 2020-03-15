@@ -219,7 +219,7 @@ public class Board {
                         int eval = minimax(positions - 1, depth + 1, alpha, beta, true);
                         board[i][j].draw("");
                         minEval = Math.min(minEval, eval);
-                        beta = Math.max(alpha, eval);
+                        beta = Math.min(beta, eval);
                         if (beta <= alpha) {
                             break;
                         }
